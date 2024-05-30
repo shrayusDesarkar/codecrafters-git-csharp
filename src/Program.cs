@@ -19,7 +19,7 @@ if (command == "init")
     File.WriteAllText(".git/HEAD", "ref: refs/heads/main\n");
     Console.WriteLine("Initialized git directory");
 }
-else if(command == "cat-file" && args[2] == "-p")
+else if(command == "cat-file" && args[1] == "-p")
 {
     string fileName = args[2];
     string path = Path.Combine(".git", "objects", fileName[..2], fileName[2..]);
